@@ -130,6 +130,7 @@ const WFSignPanel = ({
       {/* 操作按钮 */}
       <div style={{ marginTop: '12px', gap: '8px', display: 'flex' }}>
         <button
+          type="button"
           onClick={clearCanvas}
           style={{
             padding: '6px 12px',
@@ -142,6 +143,7 @@ const WFSignPanel = ({
           清空
         </button>
         <button
+          type="button"
           onClick={saveSignature}
           style={{
             padding: '6px 12px',

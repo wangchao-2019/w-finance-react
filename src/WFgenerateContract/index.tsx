@@ -1,5 +1,5 @@
 import { PDFDocument } from 'pdf-lib';
-import React, { useImperativeHandle, useRef, useState } from 'react';
+import React, { useImperativeHandle, useRef } from 'react';
 // 类型定义
 interface Position {
   x?: number;
@@ -13,10 +13,10 @@ interface WFgenerateContractProp extends Position {
   getSignFile?: (value: File) => void;
   getPdfFile?: (value: File) => void;
 }
-type fileData ={
-  signImage?:File | '',
-  pdfFile?:File |'',
-}
+type fileData = {
+  signImage?: File | '';
+  pdfFile?: File | '';
+};
 
 const WFgenerateContract: React.FC<WFgenerateContractProp> = React.forwardRef(
   (
@@ -33,9 +33,9 @@ const WFgenerateContract: React.FC<WFgenerateContractProp> = React.forwardRef(
     ref,
   ) => {
     const fileRef = useRef<fileData>({
-      signImage:'',
-      pdfFile:'',
-    })
+      signImage: '',
+      pdfFile: '',
+    });
     // 状态
     // const [pdfFile, setPdfFile] = useState<File | null>(null);
     // const [signImage, setSignImage] = useState<File | null>(null);
@@ -57,7 +57,7 @@ const WFgenerateContract: React.FC<WFgenerateContractProp> = React.forwardRef(
       const file = e.target.files?.[0];
       if (file) {
         // setPdfFile(file);
-        fileRef.current.pdfFile = file
+        fileRef.current.pdfFile = file;
         getPdfFile?.(file);
       }
     };
@@ -67,9 +67,8 @@ const WFgenerateContract: React.FC<WFgenerateContractProp> = React.forwardRef(
       const file = e.target.files?.[0];
       if (file) {
         // setSignImage(file);
-        fileRef.current.signImage = file
+        fileRef.current.signImage = file;
         getSignFile?.(file);
-
       }
     };
 
@@ -81,7 +80,7 @@ const WFgenerateContract: React.FC<WFgenerateContractProp> = React.forwardRef(
       }
 
       try {
-        getStatus && getStatus(true);
+        getStatus?.(true);
 
         // 读取PDF文件
         const pdfBytes = await fileRef.current.pdfFile.arrayBuffer();
@@ -127,12 +126,12 @@ const WFgenerateContract: React.FC<WFgenerateContractProp> = React.forwardRef(
         URL.revokeObjectURL(url);
         a.remove();
         alert('签名合并成功！');
-        onCompelete && onCompelete(blob);
+        onCompelete?.(blob);
       } catch (err) {
         console.error('合并失败：', err);
         alert('PDF合并失败，请检查文件');
       } finally {
-        getStatus && getStatus(false);
+        getStatus?.(false);
       }
     };
     useImperativeHandle(
@@ -145,8 +144,8 @@ const WFgenerateContract: React.FC<WFgenerateContractProp> = React.forwardRef(
           selectPdf() {
             pdfInputRef.current?.click();
           },
-         async handleMerge() {
-           await handleMerge();
+          async handleMerge() {
+            await handleMerge();
           },
         };
       },

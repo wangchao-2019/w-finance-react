@@ -37,7 +37,6 @@ const WFinput: FC<WFinputProps> = ({
   defaultValue = '',
   placeholder = '请输入金额',
   maxLength = 16,
-  decimalPlaces = 2,
   confirmText = '确认',
   cancelText = '取消',
   onConfirm,
@@ -47,7 +46,7 @@ const WFinput: FC<WFinputProps> = ({
   const [inputValue, setInputValue] = useState<string>('');
   const deferredValue = useDeferredValue<string>(inputValue);
   // 输入框 DOM 引用（自动聚焦）
-  const inputRef = useRef<HTMLInputElement |null>(null);
+  const inputRef = useRef<HTMLInputElement | null>(null);
 
   // 格式化金额：千分位 + 保留小数
   const formatAmount = (val: string | number): string => {
@@ -62,7 +61,9 @@ const WFinput: FC<WFinputProps> = ({
         onlyNumDot
           .slice(0, firstDotIndex + 1)
           .replace(/\B(?=(\d{3})+(?!\d))/g, ',') +
-        onlyNumDot.slice(firstDotIndex + 1,firstDotIndex + 3).replace(/\./g, '')
+        onlyNumDot
+          .slice(firstDotIndex + 1, firstDotIndex + 3)
+          .replace(/\./g, '')
       );
     }
   };

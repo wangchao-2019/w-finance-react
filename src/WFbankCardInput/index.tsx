@@ -98,6 +98,7 @@ const WFbankCardInput: React.FC<WFbankCardInputProps> = ({
         {/* 清空按钮 */}
         {cardNo && (
           <button
+            type="button"
             onClick={handleClear}
             style={{
               position: 'absolute',
@@ -116,6 +117,7 @@ const WFbankCardInput: React.FC<WFbankCardInputProps> = ({
         {/* 复制按钮 */}
         {cardNo && isValid && (
           <button
+            type="button"
             onClick={handleCopy}
             style={{
               position: 'absolute',

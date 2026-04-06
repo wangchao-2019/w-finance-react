@@ -5,7 +5,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 50%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,9 +16,9 @@
 .financial-modal-container {
   width: 90%;
   max-width: 420px;
-  background: #ffffff;
+  background: #fff;
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 15%);
   padding: 24px;
   box-sizing: border-box;
 }
@@ -64,7 +64,7 @@
 }
 
 .financial-modal-input:focus {
-  border-color: #165DFF;
+  border-color: #165dff;
 }
 
 /* 按钮组 */
@@ -97,10 +97,10 @@
 
 /* 确认按钮（金融主色） */
 .financial-modal-btn.confirm {
-  background: #165DFF;
-  color: #ffffff;
+  background: #165dff;
+  color: #fff;
 }
 
 .financial-modal-btn.confirm:hover {
-  background: #0E42D2;
+  background: #0e42d2;
 }
