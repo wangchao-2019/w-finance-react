@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "declaration": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "jsx": "react-jsx",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "baseUrl": "./",
+    "paths": {
+      "@@/*": [".dumi/tmp/*"],
+      "w-finance-react": ["src"],
+      "w-finance-react/*": ["src/*", "*"]
+    }
+  },
+  "include": [".dumirc.ts", ".fatherrc.ts", "src/**/*"]
+}
