@@ -9,7 +9,7 @@
     "dist"
   ],
   "scripts": {
-    "deploy": "gh-pages -d dist",
+    "deploy": "gh-pages -d docs-dist",
     "build": "father build",
     "build:watch": "father dev",
     "dev": "dumi dev",
