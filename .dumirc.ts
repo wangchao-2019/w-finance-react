@@ -2,6 +2,8 @@ import { defineConfig } from 'dumi';
 
 export default defineConfig({
   outputPath: 'docs-dist',
+  base:'/w-finance-react/',
+  publicPath:'/w-finance-react/',
   themeConfig: {
     name: 'w-finance-react',
     nav: [
