@@ -18,7 +18,7 @@ pnpm i w-finance-react -S
 
 ## 🚀 快速开始
 
-以下是 react-vant 的一些代码示例：
+以下是 w-finance-react 的一些代码示例：
 
 #### 代码片段:
 
