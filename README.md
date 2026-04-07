@@ -5,39 +5,31 @@
 
 A react library developed with dumi
 
-## Usage
+## 📦 安装
 
-TODO
-
-## Options
-
-TODO
-
-## Development
 
 ```bash
-# install dependencies
-$ npm install
+# npm
+npm i w-finance-react -S
 
-# develop library by docs demo
-$ npm start
-
-# build library source code
-$ npm run build
-
-# build library source code in watch mode
-$ npm run build:watch
-
-# build docs
-$ npm run docs:build
-
-# Locally preview the production build.
-$ npm run docs:preview
-
-# check your project for potential problems
-$ npm run doctor
+# pnpm
+pnpm i w-finance-react -S 
 ```
 
-## LICENSE
+## 🚀 快速开始
 
-MIT
+以下是 react-vant 的一些代码示例：
+
+#### 代码片段:
+
+```jsx
+import ReactDOM from 'react-dom';
+import { WFbankCardInput } from 'w-finance-react';
+
+function App() {
+  return <WFbankCardInput></WFbankCardInput>;
+}
+
+ReactDOM.render(<App />, mountNode);
+```
+

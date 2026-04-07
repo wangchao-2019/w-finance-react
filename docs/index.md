@@ -6,7 +6,7 @@ hero:
     - text: 快速开始
       link: /guide
     - text: github
-      link: /
+      link: https://github.com/wangchao-2019/w-finance-react
 features:
   - title: Hello
     emoji: 💎
